@@ -19,14 +19,15 @@
     <a-assets>
         <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
     </a-assets>
-    <a-entity camera look-controls wasd-controls></a-entity>
-
-    <a-entity text-geometry="value: What's up"></a-entity>
-    <a-entity text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
-
     <a-sky></a-sky>
-    <a-box></a-box>
     <a-plane></a-plane>
+    <a-box>
+             <a-entity camera look-controls wasd-controls></a-entity>
+             <a-entity text-geometry="value: What's up"></a-entity>
+             <a-entity text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
+
+   </a-box>
+
 </a-scene>
 <script>
     var sceneEl = document.querySelector('a-scene');
