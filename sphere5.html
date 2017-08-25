@@ -1,0 +1,56 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/set-image.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+</head>
+<body class="a-body aframe-inspector-opened">
+
+<a-scene>
+
+    <a-assets>
+        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json">
+
+        </a-asset-item>
+    <img id="decalnormal" src="https://aframe.io/sample-assets/assets/images/decal/decal-normal.jpg" crossorigin="anonymous" />
+    </a-assets>
+    
+    <a-plane position="0 0 0" rotation="-90 0 0" scale="1000 1000 1" visible="true" material="src:https://aframe.io/sample-assets/assets/images/decal/decal-normal.jpg;normalScale:2000 2000;wireframe:false;wireframeLinewidth:2000;opacity:1" geometry="primitive:plane;segmentsHeight:20;segmentsWidth:20;width:2000;height:2000"></a-plane>
+    <a-box position="0 0 0" rotation="0 0 0" scale="1000 1000 1000" visible="true" material="side:back;src:https://aframe.io/sample-assets/assets/images/envmap/2294472375_24a3b8ef46_o.jpg" geometry="primitive:sphere;radius:100">
+             <a-entity camera="active:false" look-controls="" wasd-controls="" position="0.9758132539294743 0 5.145363483386721" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+             <a-entity text-geometry="value:What's up" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+             <a-entity text-geometry="value:Dog?;font:#optimerBoldFont" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+        
+   </a-box>
+    <a-entity camera look-controls wasd-controls></a-entity>
+</a-scene>
+<script>
+    var sceneEl = document.querySelector('a-scene');
+
+
+    window.addEventListener("keypress", function(e){
+        if(e.keyCode === 86){
+            console.log('keyboard was press');
+        }
+
+        if(e.keyCode === 13){
+            console.log('enter keyboard was press');
+        }
+        var x = e.keyCode;
+        console.log('keyCode : '+x);
+
+    });
+    console.log(sceneEl);
+    console.log('tommy');
+
+
+</script>
+
+</body>
+</html>

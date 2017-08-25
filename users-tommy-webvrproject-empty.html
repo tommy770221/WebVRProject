@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="components/aframe.min.js"></script>
+    <script src="components/aframe-animation-component3-0-1.js"></script>
+    <script src="components/aframe-event-set-component3-0-1.js"></script>
+    <script src="components/aframe-layout-component3-0-1.js"></script>
+    <script src="components/aframe-template-component3-1-1.js"></script>
+    <script src="components/set-image.js"></script>
+    <script src="components/aframe-text-geometry-component.min.js"></script>
+    <script src="components/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+<a-scene id="vr-scene">
+
+    <a-assets>
+        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+    </a-assets>
+    <a-sky position="0 0 0" rotation="0 0 0" scale="-1 1 1" visible="true" material="color:#FFF;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"></a-sky>
+    <a-plane position="0 0 0" rotation="-90 0 0" scale="1 1 1" visible="true" material="color:#7890ff" geometry="primitive:plane;height:100;width:100"></a-plane>
+    <a-box id="vr-append-box" material="side:back;src:components/pics/2294472375_24a3b8ef46_o.jpg" geometry="primitive:box;radius:100;depth:60;height:60;width:60" position="0 30 0" rotation="0 0 0" scale="1 1 1" visible="true">
+             <a-entity camera camera look-controls wasd-controls="fly : true;acceleration:300">
+                 <a-box position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" material="" geometry="primitive:box">
+
+                 </a-box>
+             </a-entity>
+             <a-entity text-geometry="value:What's up" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+             <a-entity text-geometry="value:Dog?;font:#optimerBoldFont" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
+
+   </a-box>
+
+</a-scene>
+<script>
+    var sceneEl = document.querySelector('a-scene');
+
+
+    window.addEventListener("keypress", function(e){
+        if(e.keyCode === 86){
+            console.log('keyboard was press');
+        }
+
+        if(e.keyCode === 13){
+            console.log('enter keyboard was press');
+            $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="-10 -10 -10" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
+
+        }
+        var x = e.keyCode;
+        console.log('keyCode : '+x);
+
+    });
+    console.log(sceneEl);
+    console.log('tommy');
+
+
+</script>
+
+</body>
+</html>

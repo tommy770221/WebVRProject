@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
-    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
-    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/aframe.min.js"></script>
+    <script src="components/aframe-animation-component3-0-1.js"></script>
+    <script src="components/aframe-event-set-component3-0-1.js"></script>
+    <script src="components/aframe-layout-component3-0-1.js"></script>
+    <script src="components/aframe-template-component3-1-1.js"></script>
     <script src="components/set-image.js"></script>
-    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="components/aframe-text-geometry-component.min.js"></script>
 
 </head>
 <body>
@@ -21,8 +21,12 @@
     </a-assets>
     <a-sky></a-sky>
     <a-plane></a-plane>
-    <a-box>
-             <a-entity camera look-controls wasd-controls></a-entity>
+    <a-box material="side:back;src:components/pics/2294472375_24a3b8ef46_o.jpg" geometry="primitive:sphere;radius:100">
+             <a-entity camera look-controls wasd-controls>
+                 <a-box>
+
+                 </a-box>
+             </a-entity>
              <a-entity text-geometry="value: What's up"></a-entity>
              <a-entity text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
 
