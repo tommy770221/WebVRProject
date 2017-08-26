@@ -59,11 +59,12 @@
             console.log('position : '+position.x);
             console.log('position : '+position.y);
             console.log('position : '+position.z);
-           var testDis=position.z-boxPosition.z;
 
-           if(testDis<5 && testDis>-5){
-               console.log('bbb! bbb!');
-           }
+            var testDis=position.z-boxPosition.z;
+
+            if(testDis<5 && testDis>-5){
+                console.log('bbb! bbb!');
+            }
 
             console.log('boxPosition : '+boxPosition.x);
             console.log('boxPosition : '+boxPosition.y);
@@ -72,7 +73,13 @@
             console.log('keyCode : '+x);
         }
 
+        if(e.keyCode == 65 || e.keyCode == 87 || e.keyCode == 83 || e.keyCode == 68){
+
+        }
+
     });
+
+
     console.log(sceneEl);
     console.log('tommy');
 
