@@ -1,0 +1,13 @@
+# Material Count: 1
+
+newmtl monster
+Ns 54.901961
+Ka 0.000000 0.000000 0.000000
+Kd 0.990000 0.990000 0.990000
+Ks 0.100000 0.100000 0.100000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd textures/Monster.jpg
+map_Ka textures/Monster.jpg

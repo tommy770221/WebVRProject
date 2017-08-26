@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://npmcdn.com/aframe-animation-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-event-set-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-layout-component@3.0.1"></script>
+    <script src="https://npmcdn.com/aframe-template-component@3.1.1"></script>
+    <script src="components/set-image.js"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
+    <script src="node_modules/aframe-keyboard/build/bundle.js"></script>
+    <script src="components/laser.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-sky color="#999999"></a-sky>
+    <a-entity id="keyboard" position="0 1.25 1" scale="3 3 3" keyboard/>
+    <a-box width=".1" height=".1" depth=".1"  color="#4CC3D9" webvr-controller="0" raycaster laser>
+        <a-event name="webvrcontrollerbutton1pressed" color="#0000FF" webvr-controller-vibration="true"></a-event>
+        <a-event name="webvrcontrollerbutton1released" color="#FF0000" webvr-controller-vibration="false"></a-event>
+    </a-box>
+    <a-box width=".1" height=".1" depth=".1"  color="#4CC3D9" webvr-controller="1" raycaster laser>
+        <a-event name="webvrcontrollerbutton1pressed" color="#0000FF" webvr-controller-vibration="true"></a-event>
+        <a-event name="webvrcontrollerbutton1released" color="#FF0000" webvr-controller-vibration="false"></a-event>
+    </a-box>
+    <a-camera id="player"></a-camera>
+</a-scene>
+</body>
+<script>
+    document.querySelector("#keyboard").addEventListener("keyboard-keydown",function(e){
+        console.log(e.detail.key);
+    });
+</script>
+</html>
