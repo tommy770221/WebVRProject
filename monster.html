@@ -25,8 +25,10 @@
                  <a-entity geometry="primitive: plane; height: 0.2; width: 0.2" position="0 0 -1"
                            material="color: gray; opacity: 0.5"></a-entity>
              </a-entity>
+             <a-box material="color:#FFF" id="this-box-position"  position="2 1 -15"  ></a-box>
 
    </a-box>
+
 </a-scene>
 
 </body>
@@ -42,20 +44,31 @@
 
         if(e.keyCode === 13){
             console.log('enter keyboard was press');
-            var vrExist=$('#vr-append-box');
-            if(vrExist==null){
-                $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
+         //   var vrExist=$('#vr-append-box');
+         //   if(vrExist==null){
+                $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="0 20 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
 
-            }
+           // }
         }
         var x = e.keyCode;
         console.log('keyCode : '+x);
 
         if(e.keyCode == 38){
            var position=$('#camera-position').attr('position');
-           console.log('position : '+position.x);
+           var boxPosition=$('#this-box-position').attr('position');
+            console.log('position : '+position.x);
             console.log('position : '+position.y);
             console.log('position : '+position.z);
+           var testDis=position.z-boxPosition.z;
+
+           if(testDis<5 && testDis>-5){
+               console.log('bbb! bbb!');
+           }
+
+            console.log('boxPosition : '+boxPosition.x);
+            console.log('boxPosition : '+boxPosition.y);
+            console.log('boxPosition : '+boxPosition.z);
+
             console.log('keyCode : '+x);
         }
 
