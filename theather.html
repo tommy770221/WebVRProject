@@ -1,0 +1,35 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="components/aframe.min.js"></script>
+    <script src="components/aframe-animation-component3-0-1.js"></script>
+    <script src="components/aframe-event-set-component3-0-1.js"></script>
+    <script src="components/aframe-layout-component3-0-1.js"></script>
+    <script src="components/aframe-template-component3-1-1.js"></script>
+    <script src="components/set-image.js"></script>
+    <script src="components/aframe-text-geometry-component.min.js"></script>
+    <script src="components/jquery-3.2.1.min.js"></script>
+</head>
+<body class="a-body aframe-inspector-opened">
+
+<a-scene class="fullscreen" canvas="" inspector="url:https://unpkg.com/aframe-inspector@0.5.x/dist/aframe-inspector.min.js" keyboard-shortcuts="enterVR:true;exitVR:true;resetSensor:true" screenshot="width:4096;height:2048" vr-mode-ui="enabled:true" auto-enter-vr="display:GearVR;enabled:true">
+
+    <a-sky position="0 0 0" rotation="0 0 0" scale="-1 1 1" visible="true" material="color:#FFF;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"></a-sky>
+    <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" material="" geometry="primitive:plane"></a-plane>
+    <a-box material="side:back;src:texture/door.jpg" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:box">
+        <a-entity camera="active:false" look-controls="" wasd-controls="" position="-14.367 0 -52.474" rotation="-26.814424812122535 -50.42028597151204 0" scale="1 1 1" visible="true">
+        </a-entity>
+
+    </a-box>
+
+    <a-entity position="0 50 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:cylinder;radius:50;height:100" material="src:texture/door.jpg;side:back"></a-entity>
+    <a-entity position="-30 50 30" rotation="0 0 0" scale="1 1 1" visible="true" geometry="depth:60;height:100;width:50"></a-entity>
+    <a-entity position="30 50 30" rotation="0 0 0" scale="1 1 1" visible="true" geometry="depth:60;height:100;width:50"></a-entity>
+    <a-entity position="0 50 50" rotation="0 0 0" scale="1 1 1" visible="true" geometry="depth:2;height:100;width:10"></a-entity>
+    <a-entity position="0 -3 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="height:10;depth:1000;width:1000" material="src:texture/floor.jpg"></a-entity>
+</a-scene>
+
+
+</body>
+</html>
