@@ -29,6 +29,10 @@
              <a-entity text-geometry="value:What's up" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
              <a-entity text-geometry="value:Dog?;font:#optimerBoldFont" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>
 
+        <a-entity position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj"></a-entity>
+        <a-entity position="4.296 0 9.672" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj"></a-entity>
+        <a-entity position="-10.109 0 1.532" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj"></a-entity>
+        <a-entity position="-20.644 0.012 8.254" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj"></a-entity>
    </a-box>
 
 </a-scene>
@@ -43,11 +47,11 @@
 
         if(e.keyCode === 13){
             console.log('enter keyboard was press');
-            var vrExist=$('#vr-append-box');
-            if(vrExist==null){
-                $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
+           // var vrExist=$('#vr-append-box');
+          //  if(vrExist==null){
+                $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="-10 0 -10" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
 
-            }
+           // }
 
         }
         var x = e.keyCode;
