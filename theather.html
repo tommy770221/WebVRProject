@@ -31,6 +31,19 @@
     <a-entity id="venus-position" position="20 5 -20" scale="0.005 0.005 0.005" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/venus/Venus.obj"></a-entity>
 
     <a-entity id="zeus-words" text-geometry="value:What's up" visible="false" position="-20 15 0" rotation="0 0 0" scale="1 1 1" ></a-entity>
+    <a-entity id="hercules-words" text-geometry="value:Very glad to know you, friend!" visible="false" position="-20 17 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="hercules-words-a" text-geometry="value:I am the ancient Greek hero Hercules," visible="false" position="-20 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-b" text-geometry="value:is the king of the gods Zeus son" visible="false" position="-20 15 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-c" text-geometry="value:After the death of Olympus " visible="false" position="-20 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-d" text-geometry="value:became the Hercules." visible="false" position="-20 13 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-e" text-geometry="value:I like courage and glory, come up " visible="false" position="-20 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-f" text-geometry="value:with your courage to challenge it!" visible="false" position="-20 11 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-g" text-geometry="value:======>" visible="false" position="-20 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+
+    <a-entity id="hercules-words-ana" text-geometry="value:Which one is not my famous story?" visible="false" position="10 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="hercules-words-anb" text-geometry="value:1. Rescue Prometheus" visible="false" position="10 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anc" text-geometry="value:2. Completed Twelve Albert" visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-and" text-geometry="value:3. led the Trojan horse " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <a-entity id="cylinder-wall" position="0 50 0" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="primitive:cylinder;radius:100;height:100" material="src:texture/brick/brick_diffuse.jpg;side:back"></a-entity>
@@ -45,7 +58,7 @@
 <script>
 
     window.addEventListener("keypress", function(e){
-        var keyCode=e.keyCode || e.which;
+        var keyCode= e.which;
         if(keyCode === 86){
             console.log('keyboard was press');
         }
@@ -66,9 +79,26 @@
             console.log('position : '+position.x);
             console.log('position : '+position.y);
             console.log('position : '+position.z);
-
             console.log('keyCode : '+x);
         }
+
+        if(keyCode ===51){
+            var position=$('#camera-position').attr('position');
+            var herculesposition=$('#hercules-position').attr('position');
+            console.log('herculesposition : '+herculesposition.z);
+            var croshercules=position.z-herculesposition.z;
+            console.log(position.z-herculesposition.z);
+            if(15>croshercules && croshercules>-15){
+                   $('#hercules-position').append('  <a-animation attribute="rotation"\n' +
+                       '               dur="10000"\n' +
+                       '               fill="forwards"\n' +
+                       '               to="0 360 0"\n' +
+                       '               repeat="0"></a-animation>')
+            }else{
+
+            }
+        }
+
 
         if(keyCode === 97 || keyCode === 100 || keyCode === 119 || keyCode === 115 ||
             keyCode === 37 || keyCode === 38 || keyCode === 39 || keyCode === 40){
@@ -77,17 +107,39 @@
             console.log('position : '+position.y);
             console.log('position : '+position.z);
 
-            var zeusposition=$('#zeus-position').attr('position');
-            console.log('zeusposition : '+zeusposition.x);
-            console.log('zeusposition : '+zeusposition.y);
-            console.log('zeusposition : '+zeusposition.z);
-            var crosZeus=position.z-zeusposition.z;
-            console.log(position.z-zeusposition.z);
-            if(75>crosZeus && crosZeus>50){
-                $('#zeus-words').attr('visible',"true");
+            var herculesposition=$('#hercules-position').attr('position');
+            console.log('herculesposition : '+herculesposition.z);
+            var croshercules=position.z-herculesposition.z;
+            console.log(position.z-herculesposition.z);
+            if(15>croshercules && croshercules>-15){
+                $('#hercules-words').attr('visible',"true");
+                $('#hercules-words-a').attr('visible',"true");
+                $('#hercules-words-b').attr('visible',"true");
+                $('#hercules-words-c').attr('visible',"true");
+                $('#hercules-words-d').attr('visible',"true");
+                $('#hercules-words-e').attr('visible',"true");
+                $('#hercules-words-f').attr('visible',"true");
+                $('#hercules-words-g').attr('visible',"true");
+                $('#hercules-words-ana').attr('visible',"true");
+                $('#hercules-words-anb').attr('visible',"true");
+                $('#hercules-words-anc').attr('visible',"true");
+                $('#hercules-words-and').attr('visible',"true");
+
+
                 console.log('show');
             }else{
-                $('#zeus-words').attr('visible',"false");
+                $('#hercules-words').attr('visible',"false");
+                $('#hercules-words-a').attr('visible',"false");
+                $('#hercules-words-b').attr('visible',"false");
+                $('#hercules-words-c').attr('visible',"false");
+                $('#hercules-words-d').attr('visible',"false");
+                $('#hercules-words-e').attr('visible',"false");
+                $('#hercules-words-f').attr('visible',"false");
+                $('#hercules-words-g').attr('visible',"false");
+                $('#hercules-words-ana').attr('visible',"false");
+                $('#hercules-words-anb').attr('visible',"false");
+                $('#hercules-words-anc').attr('visible',"false");
+                $('#hercules-words-and').attr('visible',"false");
                 console.log('dispear');
             }
 
