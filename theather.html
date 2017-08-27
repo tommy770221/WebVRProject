@@ -23,7 +23,7 @@
         <a-entity id="camera-position" camera="userHeight:13" look-controls wasd-controls="acceleration:500" position="0 0 50">
             <a-box material="color: #FF2222; shader: flat" scale="1 1 1" visible="true" geometry="primitive:box">
             </a-box>
-             <a-entity text-geometry="value: Score: " position="-12.3 7 -11" visible="true" Material="color:#008080;">
+             <a-entity text-geometry="value: Score: " position="-2.3 7 -11" visible="true" Material="color:#008080;">
                 <a-entity id="score_value" position="3 0 0"text-geometry="value: 0000">
                 </a-entity>
              </a-entity>
@@ -31,7 +31,7 @@
     </a-box>
 
     <!-- 神像位置 -->
-    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj">
+    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj;mtl:model/objFile/zeus/zeus-2.mtl">
        <a-entity id="zeus-name" text-geometry="value:ZEUS" position="0 16 0" visible="true">
             // offset position from parent
         <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
@@ -46,7 +46,7 @@
             </a-animation>
         </a-entity>
     </a-entity>
-    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj">
+    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj;mtl:model/objFile/hercules/hercules.mtl">
         <a-entity id="hercules-name" text-geometry="value:HERCULES" position="3 30 0" visible="true">
             <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
 
@@ -61,76 +61,75 @@
         </a-entity>
     </a-entity>
     <!-- 宙斯介紹 -->
-    <a-entity id="zeus-words"   text-geometry="value:Do not be afraid, strangers." visible="false" position="-20 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="zeus-words-a" text-geometry="value:I am the king of gods Zeus, " visible="false" position="-20 15 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="zeus-words-b" text-geometry="value:as long as you correct the question." visible="false" position="-20 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="zeus-words-c" text-geometry="value:You can get my favor. " visible="false" position="-20 13 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words"   text-geometry="value:Don't be afraid, stranger." visible="false" position="-20 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="zeus-words-a" text-geometry="value:I'm Zeus. King of the gods. " visible="false" position="-20 15 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-b" text-geometry="value:If you pass my test. You will have " visible="false" position="-20 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-c" text-geometry="value:my bless. " visible="false" position="-20 13 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 宙斯問答 -->
-    <a-entity id="zeus-words-ana" text-geometry="value:Which area do I control?" visible="false" position="10 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="zeus-words-anb" text-geometry="value:1. Sky" visible="false" position="10 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-ana" text-geometry="value:Which world is in my control?" visible="false" position="10 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="zeus-words-anb" text-geometry="value:1. Sky and air" visible="false" position="10 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-anc" text-geometry="value:2. Ocean" visible="false" position="10 12 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="zeus-words-and" text-geometry="value:3. Underground " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-and" text-geometry="value:3. World of the dead " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="zeus-words-anright" text-geometry="value:2. Ocean" visible="false" position="10 12 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="zeus-words-anwrong" text-geometry="value:3. Underground " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-anright" text-geometry="value:2. Ocean" visible="false" position="0 0 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-anwrong" text-geometry="value:3. Underground " visible="false" position="0 0 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 阿波羅介紹 -->
     <a-entity id="appollo-words"   text-geometry="value:Humble mortal, " visible="false" position="-40 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="appollo-words-a" text-geometry="value:I am the sun god Apollo." visible="false" position="-40 15 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-b" text-geometry="value:In charge of light with the truth, " visible="false" position="-40 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-c" text-geometry="value:all lies can not escape my eyes!" visible="false" position="-40 13 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-a" text-geometry="value:I'm Apollo." visible="false" position="-40 15 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-b" text-geometry="value:God of Sun and truth. " visible="false" position="-40 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-c" text-geometry="value:No one can lie to me!" visible="false" position="-40 13 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
     <!-- 阿波羅問答 -->
-    <a-entity id="appollo-words-ana" text-geometry="value:Which animal belongs to my holy thing?" visible="false" position="-10 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="appollo-words-ana" text-geometry="value:Which animal is my symbol? " visible="false" position="-10 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
     <a-entity id="appollo-words-anb" text-geometry="value:1. Lion" visible="false" position="-10 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-anc" text-geometry="value:2. Crows" visible="false" position="-10 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-and" text-geometry="value:3. Bulls " visible="false" position="-10 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-anc" text-geometry="value:2. Raven" visible="false" position="-10 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-and" text-geometry="value:3. Ox " visible="false" position="-10 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="appollo-words-anright" text-geometry="value:2. Crows" visible="false" position="-10 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-anwrong" text-geometry="value:3. Bulls " visible="false" position="-10 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-anright" text-geometry="value:That's correct. Seems like the glory of sun shining in your eyes.May your path always under the sun." visible="false" position="-20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-anwrong" text-geometry="value:Your future is in the dark.Go back!" visible="false" position="-20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 海克力士介紹 -->
-    <a-entity id="hercules-words" text-geometry="value:Very glad to know you, friend!" visible="false" position="-20 17 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="hercules-words-a" text-geometry="value:I am the ancient Greek hero Hercules," visible="false" position="-20 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-b" text-geometry="value:is the king of the gods Zeus son" visible="false" position="-20 15 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-c" text-geometry="value:After the death of Olympus " visible="false" position="-20 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-d" text-geometry="value:became the Hercules." visible="false" position="-20 13 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-e" text-geometry="value:I like courage and glory, come up " visible="false" position="-20 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-f" text-geometry="value:with your courage to challenge it!" visible="false" position="-20 11 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-g" text-geometry="value:======>" visible="false" position="-20 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words" text-geometry="value:Nice to meet you, my friend. I'm" visible="false" position="-20 17 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="hercules-words-a" text-geometry="value:Heracles. " visible="false" position="-20 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-b" text-geometry="value:Son of Zeus, hero of Greek " visible="false" position="-20 15 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-c" text-geometry="value:mythology and God of Strength. " visible="false" position="-20 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-d" text-geometry="value:Bring your courage and past the" visible="false" position="-20 13 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-e" text-geometry="value:trial! " visible="false" position="-20 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
 
     <!-- 海克力士問答 -->
-    <a-entity id="hercules-words-ana" text-geometry="value:Which one is not my famous story?" visible="false" position="10 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="hercules-words-anb" text-geometry="value:1. Rescue Prometheus" visible="false" position="10 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-anc" text-geometry="value:2. Completed Twelve Albert" visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-and" text-geometry="value:3. led the Trojan horse " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-ana" text-geometry="value:Which one is not my famous adventure?" visible="false" position="10 16 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="hercules-words-anb" text-geometry="value:1. Save Prometheus." visible="false" position="10 14 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anc" text-geometry="value:2. Finish twelve labours." visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-and" text-geometry="value:3. Win the Troy War. " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="hercules-words-anright" text-geometry="value:2. Completed Twelve Albert" visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-anwrong" text-geometry="value:3. led the Trojan horse " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anright" text-geometry="value:You showed great courage.My friend, may you future be blessed！" visible="false" position="0 0 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anwrong" text-geometry="value:You are not brave enough to pass！ " visible="false" position="0 0 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
 
 
     <!-- 維納斯介紹 -->
-    <a-entity id="venus-words"   text-geometry="value:How do you do, I was born from " visible="false" position="0 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="venus-words-a" text-geometry="value:the sea goddess Venus, in charge of" visible="false" position="0 15 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="venus-words-b" text-geometry="value:love and desire Do not forget to" visible="false" position="0 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="venus-words-c" text-geometry="value:answer because of my beauty!" visible="false" position="0 13 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words"   text-geometry="value:Hello there!" visible="false" position="0 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="venus-words-a" text-geometry="value:I am Venus. I born from the sea and " visible="false" position="0 15 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-b" text-geometry="value:I responsible for love and desire." visible="false" position="0 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-c" text-geometry="value:Don't forget answer the question " visible="false" position="0 13 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-d" text-geometry="value:because of my beauty. " visible="false" position="0 13 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
     <!-- 維納斯問答 -->
-    <a-entity id="venus-words-ana" text-geometry="value:According to mythology, who is my child?" visible="false" position="30 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
-    <a-entity id="venus-words-anb" text-geometry="value:1. Hermes" visible="false" position="30 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-ana" text-geometry="value:According to mythology, who is my offspring?" visible="false" position="30 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
+    <a-entity id="venus-words-anb" text-geometry="value:1. Hades" visible="false" position="30 14 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="venus-words-anc" text-geometry="value:2. Apollo" visible="false" position="30 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="venus-words-and" text-geometry="value:3. Qiu bitter " visible="false" position="30 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-and" text-geometry="value:3. Cupid" visible="false" position="30 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="venus-words-anright" text-geometry="value:2. Apollo" visible="false" position="30 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="venus-words-anwrong" text-geometry="value:3. Qiu bitter " visible="false" position="30 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-anright" text-geometry="value:Nice one, mortal.You really don't want to stay any longer with me?" visible="false" position="20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-anwrong" text-geometry="value:What a shame. You need to practice more." visible="false" position="20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <a-entity id="cylinder-wall" position="0 50 0" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="primitive:cylinder;radius:100;height:100" material="src:texture/brick/brick_diffuse.jpg;side:back"></a-entity>
@@ -185,8 +184,22 @@
                        '               dur="10000"\n' +
                        '               fill="forwards"\n' +
                        '               to="0 360 0"\n' +
-                       '               repeat="0"></a-animation>')
+                       '               repeat="0"></a-animation>');
+                   $('#hercules-words-anwrong').attr('visible',"false");
+                   $('#hercules-words-anright').attr('visible',"true");
             }else{
+                if(15>crosappollo && crosappollo>-15){
+                    $('#appollo-words-anright').attr('visible',"false");
+                    $('#appollo-words-anwrong').attr('visible',"true");
+                }
+                if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
+                    $('#venus-words-anright').attr('visible',"false");
+                    $('#venus-words-anwrong').attr('visible',"true");
+                }
+                if(15>croszeus && croszeus>-15){
+                    $('#zeus-words-anright').attr('visible',"false");
+                    $('#zeus-words-anwrong').attr('visible',"true");
+                }
 
             }
 
@@ -196,9 +209,23 @@
                     '               dur="10000"\n' +
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
-                    '               repeat="0"></a-animation>')
-            }else{
+                    '               repeat="0"></a-animation>');
 
+                $('#venus-words-anwrong').attr('visible',"false");
+                $('#venus-words-anright').attr('visible',"true");
+            }else{
+                if(15>crosappollo && crosappollo>-15){
+                    $('#appollo-words-anright').attr('visible',"false");
+                    $('#appollo-words-anwrong').attr('visible',"true");
+                }
+                if(15>croszeus && croszeus>-15){
+                    $('#zeus-words-anright').attr('visible',"false");
+                    $('#zeus-words-anwrong').attr('visible',"true");
+                }
+                if(15>croshercules && croshercules>-15){
+                    $('#hercules-words-anright').attr('visible',"false");
+                    $('#hercules-words-anwrong').attr('visible',"true");
+                }
             }
         }
 
@@ -214,9 +241,22 @@
                     '               dur="10000"\n' +
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
-                    '               repeat="0"></a-animation>')
+                    '               repeat="0"></a-animation>');
+                $('#appollo-words-anwrong').attr('visible',"false");
+                $('#appollo-words-anright').attr('visible',"true");
             }else{
-
+                if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
+                    $('#venus-words-anright').attr('visible',"false");
+                    $('#venus-words-anwrong').attr('visible',"true");
+                }
+                if(15>croszeus && croszeus>-15){
+                    $('#zeus-words-anright').attr('visible',"false");
+                    $('#zeus-words-anwrong').attr('visible',"true");
+                }
+                if(15>croshercules && croshercules>-15){
+                    $('#hercules-words-anright').attr('visible',"false");
+                    $('#hercules-words-anwrong').attr('visible',"true");
+                }
             }
         }
 
@@ -233,7 +273,21 @@
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
                     '               repeat="0"></a-animation>');
+                $('#zeus-words-anwrong').attr('visible',"false");
+                $('#zeus-words-anright').attr('visible',"true");
             }else{
+                if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
+                    $('#venus-words-anright').attr('visible',"false");
+                    $('#venus-words-anwrong').attr('visible',"true");
+                }
+                if((15>croshercules && croshercules>-15)){
+                    $('#hercules-words-anright').attr('visible',"false");
+                    $('#hercules-words-anwrong').attr('visible',"true");
+                }
+                if((15>crosappollo && crosappollo>-15) && (10>crosXappollo && crosXappollo>-10)){
+                    $('#appollo-words-anright').attr('visible',"false");
+                    $('#appollo-words-anwrong').attr('visible',"true");
+                }
 
             }
         }
@@ -272,8 +326,6 @@
                 $('#hercules-words-c').attr('visible',"true");
                 $('#hercules-words-d').attr('visible',"true");
                 $('#hercules-words-e').attr('visible',"true");
-                $('#hercules-words-f').attr('visible',"true");
-                $('#hercules-words-g').attr('visible',"true");
                 $('#hercules-words-ana').attr('visible',"true");
                 $('#hercules-words-anb').attr('visible',"true");
                 $('#hercules-words-anc').attr('visible',"true");
@@ -287,8 +339,6 @@
                 $('#hercules-words-c').attr('visible',"false");
                 $('#hercules-words-d').attr('visible',"false");
                 $('#hercules-words-e').attr('visible',"false");
-                $('#hercules-words-f').attr('visible',"false");
-                $('#hercules-words-g').attr('visible',"false");
                 $('#hercules-words-ana').attr('visible',"false");
                 $('#hercules-words-anb').attr('visible',"false");
                 $('#hercules-words-anc').attr('visible',"false");
@@ -321,7 +371,7 @@
             }
 
             <!-- 阿波羅靠近效果 -->
-            if((15>crosappollo && crosappollo>-15) && (10>crosXappollo && crosXappollo>-10 )){
+            if((15>crosappollo && crosappollo>-15) && (10>crosXappollo && crosXappollo>-10)){
                 $('#appollo-words').attr('visible',"true");
                 $('#appollo-words-a').attr('visible',"true");
                 $('#appollo-words-b').attr('visible',"true");
@@ -346,11 +396,12 @@
 
 
             <!-- 維納斯靠近效果 -->
-            if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10 )){
+            if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
                 $('#venus-words').attr('visible',"true");
                 $('#venus-words-a').attr('visible',"true");
                 $('#venus-words-b').attr('visible',"true");
                 $('#venus-words-c').attr('visible',"true");
+                $('#venus-words-d').attr('visible',"true");
                 $('#venus-words-ana').attr('visible',"true");
                 $('#venus-words-anb').attr('visible',"true");
                 $('#venus-words-anc').attr('visible',"true");
@@ -362,6 +413,7 @@
                 $('#venus-words-a').attr('visible',"false");
                 $('#venus-words-b').attr('visible',"false");
                 $('#venus-words-c').attr('visible',"false");
+                $('#venus-words-d').attr('visible',"false");
                 $('#venus-words-ana').attr('visible',"false");
                 $('#venus-words-anb').attr('visible',"false");
                 $('#venus-words-anc').attr('visible',"false");
