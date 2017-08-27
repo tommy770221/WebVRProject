@@ -20,27 +20,61 @@
     <a-sky position="0 0 0" rotation="0 0 0" scale="-1 1 1" visible="true" material="color:#FFF;shader:flat" geometry="primitive:sphere;radius:5000;segmentsWidth:64;segmentsHeight:20"></a-sky>
     <a-plane position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" material="" geometry="primitive:plane"></a-plane>
     <a-box material="side:back;src:texture/door.jpg" position="0 0 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="primitive:box">
-        <a-entity id="camera-position" camera="userHeight:13" look-controls wasd-controls position="0 0 50">
+        <a-entity id="camera-position" camera="userHeight:13" look-controls wasd-controls="acceleration:500" position="0 0 50">
+            <a-box material="color: #FF2222; shader: flat" scale="1 1 1" visible="true" geometry="primitive:box">
+            </a-box>
+             <a-entity text-geometry="value: Score: " position="-12.3 7 -11" visible="true" Material="color:#008080;">
+                <a-entity id="score_value" position="3 0 0"text-geometry="value: 0000">
+                </a-entity>
+             </a-entity>
         </a-entity>
     </a-box>
 
     <!-- 神像位置 -->
-    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj"></a-entity>
-    <a-entity id="appollo-position" position="-20 5 -20" scale="0.005 0.005 0.005" rotation="0 -30 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/appollo/Apollo.obj"></a-entity>
-    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 -20 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj"></a-entity>
-    <a-entity id="venus-position" position="20 5 -20" scale="0.005 0.005 0.005" rotation="0 -30 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/venus/Venus.obj"></a-entity>
+    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj">
+       <a-entity id="zeus-name" text-geometry="value:ZEUS" position="0 16 0" visible="true">
+            // offset position from parent
+        <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
 
+        </a-animation>
+       </a-entity>
+    </a-entity>
+    <a-entity id="appollo-position" position="-20 5 -20" scale="0.005 0.005 0.005" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/appollo/Apollo.obj">
+        <a-entity id="appollo-name" text-geometry="value:APPOLLO" position="160 2400 0" scale="200 200 200" visible="true">
+            <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
+
+            </a-animation>
+        </a-entity>
+    </a-entity>
+    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj">
+        <a-entity id="hercules-name" text-geometry="value:HERCULES" position="3 30 0" visible="true">
+            <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
+
+            </a-animation>
+        </a-entity>
+    </a-entity>
+    <a-entity id="venus-position" position="20 5 -20" scale="0.005 0.005 0.005" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/venus/Venus.obj">
+        <a-entity id="venus-name" text-geometry="value:VENUS" position="-200 2300 0" scale="200 200 200" visible="true">
+            <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"   repeat="indefinite">
+
+            </a-animation>
+        </a-entity>
+    </a-entity>
     <!-- 宙斯介紹 -->
     <a-entity id="zeus-words"   text-geometry="value:Do not be afraid, strangers." visible="false" position="-20 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
     <a-entity id="zeus-words-a" text-geometry="value:I am the king of gods Zeus, " visible="false" position="-20 15 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-b" text-geometry="value:as long as you correct the question." visible="false" position="-20 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-c" text-geometry="value:You can get my favor. " visible="false" position="-20 13 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
+
     <!-- 宙斯問答 -->
     <a-entity id="zeus-words-ana" text-geometry="value:Which area do I control?" visible="false" position="10 16 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
     <a-entity id="zeus-words-anb" text-geometry="value:1. Sky" visible="false" position="10 14 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-anc" text-geometry="value:2. Ocean" visible="false" position="10 12 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-and" text-geometry="value:3. Underground " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+
+    <a-entity id="zeus-words-anright" text-geometry="value:2. Ocean" visible="false" position="10 12 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-anwrong" text-geometry="value:3. Underground " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 阿波羅介紹 -->
@@ -75,6 +109,11 @@
     <a-entity id="hercules-words-anc" text-geometry="value:2. Completed Twelve Albert" visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="hercules-words-and" text-geometry="value:3. led the Trojan horse " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
+    <a-entity id="hercules-words-anright" text-geometry="value:2. Completed Twelve Albert" visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anwrong" text-geometry="value:3. led the Trojan horse " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+
+
+
 
     <!-- 維納斯介紹 -->
     <a-entity id="venus-words"   text-geometry="value:How do you do, I was born from " visible="false" position="0 16 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;" ></a-entity>
@@ -93,7 +132,7 @@
     <a-entity id="left-wall" position="-50 50 30" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="depth:60;height:100;width:80" material="src:texture/brick/brick_7.png"></a-entity>
     <a-entity id="right-wall" position="50 50 30" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="depth:60;height:100;width:80" material="src:texture/brick/brick_7.png"></a-entity>
     <a-entity id="entry-wall"position="0 50 50" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="depth:2;height:100;width:120" material="src:texture/brick/brick_7.png"></a-entity>
-    <a-entity id="floor" position="0 -3 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="height:10;depth:1000;width:1000" material="src:texture/brick/brick_7.png"></a-entity>
+    <a-entity id="floor" position="0 -3 0" rotation="0 0 0" scale="1 1 1" visible="true" geometry="height:10;depth:1000;width:1000" material="src:texture/brick/tile2.png"></a-entity>
 
    </a-scene>
 
@@ -108,6 +147,7 @@
 
         if(keyCode === 13){
             console.log('enter keyboard was press');
+
             //   var vrExist=$('#vr-append-box');
             //   if(vrExist==null){
           //  $('#vr-append-box').append('<a-entity text-geometry="value:What\'s up" position="0 20 0" rotation="0 0 0" scale="1 1 1" visible="true"></a-entity>');
@@ -335,30 +375,6 @@
 
 
 
-
-
-    if (window.DeviceMotionEvent) {
-        window.addEventListener('devicemotion', function(evnet) {
-            document.body.innerHTML = evnet.acceleration.x + '<br/>' + evnet.acceleration.y + '<br/>' + evnet.acceleration.z;
-            // 加速感測
-            console.log(evnet.acceleration.x);
-            console.log(evnet.acceleration.y);
-            console.log(evnet.acceleration.z);
-
-            // 加速感測包括重力參數
-            console.log(evnet.accelerationIncludingGravity.x);
-            console.log(evnet.accelerationIncludingGravity.y);
-            console.log(evnet.accelerationIncludingGravity.z);
-
-            // 旋轉率
-            console.log(evnet.rotationRate.alpha);
-            console.log(evnet.rotationRate.beta);
-            //點頭
-            console.log(evnet.rotationRate.gamma);
-        }, false);
-
-
-    }
 
 
 
