@@ -2,8 +2,7 @@
 <head>
     <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=big5">
     <title>Title</title>
-
-    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script src="components/aframe.min.js"></script>
+    <script src="components/aframe.min.js"></script>
     <script src="components/aframe-animation-component3-0-1.js"></script>
     <script src="components/aframe-event-set-component3-0-1.js"></script>
     <script src="components/aframe-layout-component3-0-1.js"></script>
@@ -31,7 +30,7 @@
     </a-box>
 
     <!-- 神像位置 -->
-    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj;mtl:model/objFile/zeus/zeus-2.mtl">
+    <a-entity id="zeus-position" position="0 5 -60" rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/zeus/zeus-2.obj">
        <a-entity id="zeus-name" text-geometry="value:ZEUS" position="0 16 0" visible="true">
             // offset position from parent
         <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
@@ -46,7 +45,7 @@
             </a-animation>
         </a-entity>
     </a-entity>
-    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj;mtl:model/objFile/hercules/hercules.mtl">
+    <a-entity id="hercules-position" position="0 5 0" scale="0.5 0.5 0.5"  rotation="0 0 0" scale="1 1 1" visible="true" material="" obj-model="obj:model/objFile/hercules/hercules.obj">
         <a-entity id="hercules-name" text-geometry="value:HERCULES" position="3 30 0" visible="true">
             <a-animation attribute="rotation" to="0 0 60" direction="alternate" material="color:#000000" dur="1000"  repeat="indefinite">
 
@@ -73,8 +72,8 @@
     <a-entity id="zeus-words-anc" text-geometry="value:2. Ocean" visible="false" position="10 12 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="zeus-words-and" text-geometry="value:3. World of the dead " visible="false" position="10 10 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="zeus-words-anright" text-geometry="value:2. Ocean" visible="false" position="0 0 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="zeus-words-anwrong" text-geometry="value:3. Underground " visible="false" position="0 0 -60" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-anright" text-geometry="value:You answer well.I'm the ruler of all gods. Brother of Poseidon and Hades.Keep going. You will have my bless." visible="false" position="-10 5 -57" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="zeus-words-anwrong" text-geometry="value:You don't have enough ability. Practice more!" visible="false" position="-10 5 -57" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 阿波羅介紹 -->
@@ -89,8 +88,8 @@
     <a-entity id="appollo-words-anc" text-geometry="value:2. Raven" visible="false" position="-10 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="appollo-words-and" text-geometry="value:3. Ox " visible="false" position="-10 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="appollo-words-anright" text-geometry="value:That's correct. Seems like the glory of sun shining in your eyes.May your path always under the sun." visible="false" position="-20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="appollo-words-anwrong" text-geometry="value:Your future is in the dark.Go back!" visible="false" position="-20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-anright" text-geometry="value:That's correct. Seems like the glory of sun shining in your eyes.May your path always under the sun." visible="false" position="-20 5 -17" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="appollo-words-anwrong" text-geometry="value:Your future is in the dark.Go back!" visible="false" position="-15 5 -17" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <!-- 海克力士介紹 -->
@@ -109,8 +108,8 @@
     <a-entity id="hercules-words-anc" text-geometry="value:2. Finish twelve labours." visible="false" position="10 12 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="hercules-words-and" text-geometry="value:3. Win the Troy War. " visible="false" position="10 10 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="hercules-words-anright" text-geometry="value:You showed great courage.My friend, may you future be blessed！" visible="false" position="0 0 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="hercules-words-anwrong" text-geometry="value:You are not brave enough to pass！ " visible="false" position="0 0 0" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anright" text-geometry="value:You showed great courage.My friend, may you future be blessed！" visible="false" position="-10 5 3" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="hercules-words-anwrong" text-geometry="value:You are not brave enough to pass！ " visible="false" position="-5 5 3" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
 
@@ -128,8 +127,8 @@
     <a-entity id="venus-words-anc" text-geometry="value:2. Apollo" visible="false" position="30 12 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
     <a-entity id="venus-words-and" text-geometry="value:3. Cupid" visible="false" position="30 10 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
-    <a-entity id="venus-words-anright" text-geometry="value:Nice one, mortal.You really don't want to stay any longer with me?" visible="false" position="20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
-    <a-entity id="venus-words-anwrong" text-geometry="value:What a shame. You need to practice more." visible="false" position="20 0 -20" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-anright" text-geometry="value:Nice one, mortal.You really don't want to stay any longer with me?" visible="false" position="10 5 -17" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
+    <a-entity id="venus-words-anwrong" text-geometry="value:What a shame. You need to practice more." visible="false" position="15 5 -17" rotation="0 0 0" scale="1 1 1" material="color: #0095FF;"></a-entity>
 
 
     <a-entity id="cylinder-wall" position="0 50 0" rotation="0 0 0" scale="0.5 1 1" visible="true" geometry="primitive:cylinder;radius:100;height:100" material="src:texture/brick/brick_diffuse.jpg;side:back"></a-entity>
@@ -174,27 +173,28 @@
             var position=$('#camera-position').attr('position');
             var herculesposition=$('#hercules-position').attr('position');
             var venusposition=$('#venus-position').attr('position');
+            var appolloposition=$('#appollo-position').attr('position');
+            var zeusposition=$('#zeus-position').attr('position');
             console.log('herculesposition : '+herculesposition.z);
             var croshercules=position.z-herculesposition.z;
+            var croszeus=position.z-zeusposition.z;
+            var crosappollo=position.z-appolloposition.z;
             var crosvenus=position.z-venusposition.z;
             var crosXvenus=position.x-venusposition.x;
             console.log(position.z-herculesposition.z);
             if(15>croshercules && croshercules>-15){
-                   $('#hercules-position').append('  <a-animation attribute="rotation"\n' +
-                       '               dur="10000"\n' +
+                   $('#hercules-position').append('  <a-animation id="status-rotation" attribute="rotation"\n' +
+                       '               dur="1000"\n' +
                        '               fill="forwards"\n' +
                        '               to="0 360 0"\n' +
-                       '               repeat="0"></a-animation>');
+                       '               repeat="1"></a-animation>');
+                   setTimeout("removeRotation()",1000);
                    $('#hercules-words-anwrong').attr('visible',"false");
                    $('#hercules-words-anright').attr('visible',"true");
             }else{
                 if(15>crosappollo && crosappollo>-15){
                     $('#appollo-words-anright').attr('visible',"false");
                     $('#appollo-words-anwrong').attr('visible',"true");
-                }
-                if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
-                    $('#venus-words-anright').attr('visible',"false");
-                    $('#venus-words-anwrong').attr('visible',"true");
                 }
                 if(15>croszeus && croszeus>-15){
                     $('#zeus-words-anright').attr('visible',"false");
@@ -205,12 +205,12 @@
 
             <!-- 維納斯正確答案 -->
             if((15>crosvenus && crosvenus>-15) && (10>crosXvenus && crosXvenus>-10)){
-                $('#venus-position').append('  <a-animation attribute="rotation"\n' +
-                    '               dur="10000"\n' +
+                $('#venus-position').append('  <a-animation id="status-rotation" attribute="rotation"\n' +
+                    '               dur="1000"\n' +
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
-                    '               repeat="0"></a-animation>');
-
+                    '               repeat="1"></a-animation>');
+                setTimeout("removeRotation()",1000);
                 $('#venus-words-anwrong').attr('visible',"false");
                 $('#venus-words-anright').attr('visible',"true");
             }else{
@@ -222,10 +222,6 @@
                     $('#zeus-words-anright').attr('visible',"false");
                     $('#zeus-words-anwrong').attr('visible',"true");
                 }
-                if(15>croshercules && croshercules>-15){
-                    $('#hercules-words-anright').attr('visible',"false");
-                    $('#hercules-words-anwrong').attr('visible',"true");
-                }
             }
         }
 
@@ -233,15 +229,23 @@
             <!-- 阿波羅正確答案 -->
             var position=$('#camera-position').attr('position');
             var appolloposition=$('#appollo-position').attr('position');
+            var herculesposition=$('#hercules-position').attr('position');
+            var venusposition=$('#venus-position').attr('position');
+            var zeusposition=$('#zeus-position').attr('position');
             console.log('herculesposition : '+appolloposition.z);
             var crosappollo=position.z-appolloposition.z;
+            var croshercules=position.z-herculesposition.z;
+            var croszeus=position.z-zeusposition.z;
+            var crosvenus=position.z-venusposition.z;
+            var crosXvenus=position.x-venusposition.x;
             console.log(position.z-appolloposition.z);
             if(15>crosappollo && crosappollo>-15){
-                $('#appollo-position').append('  <a-animation attribute="rotation"\n' +
-                    '               dur="10000"\n' +
+                $('#appollo-position').append('  <a-animation id="status-rotation" attribute="rotation"\n' +
+                    '               dur="1000"\n' +
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
-                    '               repeat="0"></a-animation>');
+                    '               repeat="1"></a-animation>');
+                setTimeout("removeRotation()",1000);
                 $('#appollo-words-anwrong').attr('visible',"false");
                 $('#appollo-words-anright').attr('visible',"true");
             }else{
@@ -264,15 +268,23 @@
             <!-- 宙斯正確答案 -->
             var position=$('#camera-position').attr('position');
             var zeusposition=$('#zeus-position').attr('position');
+            var appolloposition=$('#appollo-position').attr('position');
+            var herculesposition=$('#hercules-position').attr('position');
+            var venusposition=$('#venus-position').attr('position');
             console.log('zeusposition : '+zeusposition.z);
             var croszeus=position.z-zeusposition.z;
+            var crosappollo=position.z-appolloposition.z;
+            var croshercules=position.z-herculesposition.z;
+            var crosvenus=position.z-venusposition.z;
+            var crosXvenus=position.x-venusposition.x;
             console.log(position.z-zeusposition.z);
             if(15>croszeus && croszeus>-15){
-                $('#zeus-position').append('  <a-animation attribute="rotation"\n' +
-                    '               dur="10000"\n' +
+                $('#zeus-position').append('<a-animation id="status-rotation" attribute="rotation"\n' +
+                    '               dur="1000"\n' +
                     '               fill="forwards"\n' +
                     '               to="0 360 0"\n' +
-                    '               repeat="0"></a-animation>');
+                    '               repeat="1"></a-animation>');
+                setTimeout("removeRotation()",1000);
                 $('#zeus-words-anwrong').attr('visible',"false");
                 $('#zeus-words-anright').attr('visible',"true");
             }else{
@@ -430,7 +442,12 @@
 
 
 
+    function removeRotation(){
+      console.log('remove rotation');
+      var abc= $('#status-rotation');
+      abc.remove();
 
+    }
 
 
 
